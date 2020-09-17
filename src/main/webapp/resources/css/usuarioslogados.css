@@ -1,0 +1,100 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#form\:admin {
+	text-align: center;
+}
+
+#form\:adminpanel {
+	position: relative;
+	width: 90%;
+	margin-top: 4%;
+	left: 5%;
+	right: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+#form\:adminpanel_header {
+	background-color: #64a9a4;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px 5px #000000;
+}
+
+#form\:adminpanel_content {
+	background-color: lightgray;
+}
+
+#form\:admin_paginator_top {
+	background-color: lightgrey;
+	border: none;
+}
+
+#form\:admin_paginator_bottom {
+	border: none;
+	background-color: lightgrey;
+}
+
+body .ui-datatable .ui-datatable-header, body .ui-datatable .ui-datatable-footer {
+	background-color: #64a9a4 ;
+	color: white ;
+	text-shadow: 2px 2px 5px #000000;
+}
+
+body .ui-datatable .ui-datatable-data>tr>td{
+	background-color: white;
+	color: black;
+	font-weight: 400;
+	text-shadow: none;
+}
+
+#form\:admin\:busca {
+	text-align: right;
+	font-weight: normal;
+	text-shadow: none;
+}
+
+#form\:admin\:globalFilter {
+	width: 150px;
+}
+
+#form\:admin\:administracao_content {
+	text-align: left;
+	font-weight: normal;
+	text-shadow: none;
+	background-color: #64a9a4 ;
+	color: white ;
+}
+
+#form\:admin\:administracao_header {
+	font-weight: normal;
+	text-shadow: none;
+}
+
+#form\:admin\:cleanCache {
+	width: 120px;
+}
+
+body .ui-panelgrid .ui-panelgrid-cell {
+	background-color: #64a9a4 ;
+	color: white ;
+}
+
+
+
+
+
+

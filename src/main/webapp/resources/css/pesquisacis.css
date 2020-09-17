@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+#filterHead{
+	margin: 0px;
+}
+
+#form\:ci\:tabelaCis\:textNumCi {
+	width: 100%;
+}
+
+#form\:ci\:tabelaCis\:selSituCi {
+	min-width: 0 !important;
+	width: 100%;
+}
+
+#form\:ci\:tabelaCis\:fieldset {
+	background-color: #64a9a4;
+	color: white;
+	text-align: start;
+}
+
+.ui-fieldset-legend, .ui-fieldset-toggler{
+	background-color: #64a9a4 !important;
+	color: white !important;
+}
+
+#form\:ci\:tabelaCis\:selSetor {
+	min-width: 0 !important;
+	width: 100%;
+}
+
+#form\:ci\:tabelaCis\:selTipoCi {
+	min-width: 0 !important;
+	width: 100%;
+}
+
+#form\:ci\:tabelaCis\:dataIni_input {
+	min-width: 0 !important;
+	width: 100%;
+}
+
+#form\:ci\:tabelaCis\:dataFinal_input {
+	min-width: 0 !important;
+	width: 100%;
+}
+
+.p-datepicker {
+	width: 100% !important;
+}
+
+#form\:ci\:tabelaCis\:numCol\:filter {
+	display: none;
+}
+
+#form\:ci\:tabelaCis\:dataSolCol\:filter {
+	display: none;
+}
+
+#form\:ci\:tabelaCis\:filterData {
+	display: none !important;
+}
+
+#form\:ci\:tabelaCis\:btBuscar {
+	margin-top: 4px;
+	width: 120px;
+	background-color: darkcyan;
+}
+
+#form\:ci\:tabelaCis\:btBuscar:hover {
+	background-color: #007ad9;
+}
+
+.direita {
+	text-align: right;
+}
+
+.textArea {
+	border: none !important;
+}
+
+

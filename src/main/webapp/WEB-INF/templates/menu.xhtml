@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:sec="https://joinfaces.org/security">
+<body>
+	<ui:composition>
+		<h:form id="menu"
+			onsubmit="this.action='#{request.contextPath}/logout';">
+			<p:growl id="growlmenu" />
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+			<div id="topdiv" class="p-grid">
+				<div class="p-col-6 p-md-12 p-lg-12 responsive">
+					<p:menubar id="logadocel" autoDisplay="false">
+						<sec:authorize access="isAuthenticated()">
+							<p:submenu label="Olá,
+						#{adminMenuBean.nome}"
+								icon="pi pi-user">
+								<p:menuitem disabled="false" containerStyleClass="logado"
+									value="Perfil" title="Acesso ao perfil de
+							usuário"
+									url="#{request.contextPath}/usuarios/perfil.xhtml">
+								</p:menuitem>
+								<p:menuitem value="Comunicados"
+									url="#{request.contextPath}/usuarios/home.xhtml" />
+							</p:submenu>
+						</sec:authorize>
+					</p:menubar>
+				</div>
+				<div class="p-col-6 p-md-12 p-lg-12 responsive">
+					<a id="icone" class="icon"> ☰ </a>
+				</div>
+			</div>
+			<p:menubar id="menutopnav" styleClass="tophide" autoDisplay="false">
+				<sec:authorize access="isAuthenticated()">
+					<p:submenu label="Olá,
+						#{adminMenuBean.nome}"
+						icon="pi pi-user" id="logado">
+						<p:menuitem disabled="false" containerStyleClass="logado"
+							value="Perfil" title="Acesso ao perfil de
+							usuário"
+							url="#{request.contextPath}/usuarios/perfil.xhtml">
+						</p:menuitem>
+						<p:menuitem value="Comunicados"
+							url="#{request.contextPath}/usuarios/home.xhtml" />
+					</p:submenu>
+				</sec:authorize>
+			
+				<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTOMENU')">
+					<p:submenu label="Autorizações" styleClass="menuFirst"
+						icon="pi pi-table">
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTONUTEC')">
+							<p:menuitem value="Nutec"
+								url="#{request.contextPath}/autoriza/autorizanutec.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTONUCAD')">
+							<p:menuitem value="Nucad"
+								url="#{request.contextPath}/autoriza/autorizanucad.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTOSEVIM')">
+							<p:menuitem value="Sevim"
+								url="#{request.contextPath}/autoriza/autorizasevim.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTOCELOG')">
+							<p:menuitem value="Celog"
+								url="#{request.contextPath}/autoriza/autorizacelog.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTONUFIS')">
+							<p:menuitem value="Nufis"
+								url="#{request.contextPath}/autoriza/autorizanufis.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'AUTODEFESA')">
+							<p:menuitem value="Defesa"
+								url="#{request.contextPath}/autoriza/autorizadefesa.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'AUTOCENTRAL')">
+							<p:menuitem value="Central"
+								url="#{request.contextPath}/autoriza/autorizacentral.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTOCOER')">
+							<p:menuitem value="Coer"
+								url="#{request.contextPath}/autoriza/autorizacoer.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTOGEDUC')">
+							<p:menuitem value="Geduc"
+								url="#{request.contextPath}/autoriza/autorizageduc.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTONUGEP')">
+							<p:menuitem value="Nugep"
+								url="#{request.contextPath}/autoriza/autorizanugep.xhtml"></p:menuitem>
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'AUTOASSTEC')">
+							<p:menuitem value="Asstec"
+								url="#{request.contextPath}/autoriza/autorizaasstec.xhtml"></p:menuitem>
+						</sec:authorize>
+					</p:submenu>
+				</sec:authorize>
+				<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'JUSTINUCAD')">
+					<p:submenu label="Justificativas" styleClass="menuFirst"
+						icon="pi pi-table">
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'JUSTINUCAD')">
+							<p:menuitem value="Nucad"
+								url="#{request.contextPath}/justifica/justificanucad.xhtml"></p:menuitem>
+						</sec:authorize>
+					</p:submenu>
+				</sec:authorize>
+				<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'ANALIMENU')">
+					<p:submenu label="Analises" icon="pi pi-table">
+						<sec:authorize access="hasAnyRole('ADMIN', 'ANALICAS')">
+							<p:menuitem value="Cas"
+								url="#{request.contextPath}/analises/ciscas.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALINUOPE')">
+							<p:menuitem value="Nuope"
+								url="#{request.contextPath}/analises/cisnuope.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALINUCAD')">
+							<p:menuitem value="Nucad"
+								url="#{request.contextPath}/analises/cisnucad.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALIGEOFI')">
+							<p:menuitem value="Geofi"
+								url="#{request.contextPath}/analises/cisgeofi.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALIDITRAN')">
+							<p:menuitem value="Ditran"
+								url="#{request.contextPath}/analises/cisditran.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALINUGEP')">
+							<p:menuitem value="Nugep"
+								url="#{request.contextPath}/analises/cisnugep.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALIPROJUR')">
+							<p:menuitem value="Projur"
+								url="#{request.contextPath}/analises/cisprojur.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALIGEENG')">
+							<p:menuitem value="Geeng"
+								url="#{request.contextPath}/analises/cisgeeng.xhtml" />
+						</sec:authorize>
+						<sec:authorize
+							access="hasAnyRole('ADMIN','SUPORTE', 'ANALIASSTEC')">
+							<p:menuitem value="Asstec"
+								url="#{request.contextPath}/analises/cisasstec.xhtml" />
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN', 'ANALIINFO')">
+							<p:menuitem value="Informática"
+								url="#{request.contextPath}/analises/cisinfo.xhtml" />
+						</sec:authorize>
+					</p:submenu>
+				</sec:authorize>
+				<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'MENUGERIR')">
+					<p:submenu label="Gerir" icon="pi pi-lock">
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'MUDASETOR')">
+							<p:menuitem value="Mudar Setor"
+								url="#{request.contextPath}/gerir/mudasetor.xhtml" />
+						</sec:authorize>
+						<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'CADNOTIFI')">
+							<p:submenu label="Notificações" icon="pi pi-lock">
+								<p:menuitem value="Cadastrar/Agendar"
+									url="#{request.contextPath}/gerir/cadnotificacao.xhtml" />
+								<sec:authorize
+									access="hasAnyRole('ADMIN','SUPORTE', 'NOTIAGENDA')">
+									<p:menuitem value="Gerir Agendamento"
+										url="#{request.contextPath}/gerir/delagnoti.xhtml" />
+								</sec:authorize>
+								<sec:authorize access="hasRole('ADMIN')">
+									<p:menuitem value="Scripts Agendamento"
+										url="#{request.contextPath}/gerir/agnotiscr.xhtml" />
+								</sec:authorize>
+							</p:submenu>
+						</sec:authorize>
+					</p:submenu>
+				</sec:authorize>
+				<sec:authorize access="hasAnyRole('ADMIN','SUPORTE')">
+					<p:submenu label="Administração" icon="pi pi-lock">
+						<sec:authorize access="hasRole('ADMIN')">
+							<p:menuitem value="Usuários OnLine"
+								url="#{request.contextPath}/admin/usuarioslogados.xhtml" />
+						</sec:authorize>
+						<p:submenu label="Cadastrar">
+							<p:menuitem value="Usuário"
+								url="#{request.contextPath}/suporte/cadastrousuario.xhtml" />
+							<sec:authorize access="hasRole('ADMIN')">
+								<p:menuitem value="Funções(Roles)" url="#"></p:menuitem>
+							</sec:authorize>
+						</p:submenu>
+						<p:submenu label="Atribuir">
+							<p:menuitem value="Funções(Roles)"
+								url="#{request.contextPath}/suporte/cadatribuicao.xhtml" />
+						</p:submenu>
+						<p:menuitem value="Relatórios" url="#" />
+					</p:submenu>
+				</sec:authorize>
+				<f:facet name="options">
+					<p:commandButton id="btSairApp" value="Sair" icon="pi pi-power-off"
+						ajax="false" />
+				</f:facet>
+			</p:menubar>
+		</h:form>
+		<p:sticky target="menu" />
+	</ui:composition>
+</body>
+</html>

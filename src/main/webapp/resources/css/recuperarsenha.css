@@ -1,0 +1,153 @@
+@charset "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+
+h1 {
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+.centeredText {
+	text-align: center
+}
+
+.bolderText {
+	font-weight: bolder;
+}
+
+.panelGridEmail {
+	position: relative;
+	width: 40%;
+	margin: 2%;
+	margin-left:30%;
+	margin-right: 30%;
+	align-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.input {
+	width: 96%;
+}
+
+.fontBolder {
+	font-weight: bolder;
+}
+
+
+#header {
+	position: relative;
+	left: 0;
+	height: 0;
+	top: 0;
+	width: 100%;
+	height: fit-content;
+}
+
+#footer {
+	position: relative;
+	width: 100%;
+	background-color: #64a9a4;
+	height: fit-content;
+	float: left;
+	background-color: #64a9a4;
+	color: white;
+	background-color: #64a9a4;
+}
+
+
+#footer h2 {
+	color: white;
+	font-size: 15px;
+	margin-left: 1%;
+}
+
+#footer #autarquia {
+	color: white;
+	font-size: 15px;
+	clear: left;
+	margin-left: 1%;
+	font-family: "Open Sans","Helvetica Neue",sans-serif;
+}
+
+#footer img {
+	float: left;
+	margin-left: 1%;
+	padding-top: 15px;
+	clear: right
+}
+
+body .ui-button {
+	background-color: #64a9a4;
+	border: 1px solid #64a9a4;
+}
+
+.imageCentered {
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.panelGridEmail {
+		position: relative;
+		margin-top: 6%;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		align-content: center;
+	}
+
+
+	#footer {
+		position: relative;
+		width: 100%;
+		float: left;
+		color: white;
+		background-color: #64a9a4;
+	}
+	
+
+}
+
+@media only screen and (max-width: 800px) {
+	.panelGridCenterEmail {
+		position: relative;
+		margin-top: 6%;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		align-content: center;
+	}
+	
+	
+	#footer {
+		position: relative;
+		width: 100%;
+		bottom: 0px;
+		float: left;
+		color: white;
+		background-color: #64a9a4;
+	}
+	
+	
+}

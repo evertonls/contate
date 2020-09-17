@@ -1,0 +1,211 @@
+@charset "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	margin: 0;
+	padding: 0;
+	/*background-color: #ffe3a7*/
+}
+
+h1 {
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+.centeredText {
+	text-align: center
+}
+
+.bolderText {
+	font-weight: bolder;
+}
+
+div#contentLogin{ 
+	position: relative;
+	top: 4%;
+}
+
+/*body .ui-panelgrid .ui-panelgrid-cell {
+	background-color: #ffe3a7;
+}*/
+
+.versionpnl{
+	text-align: right;	
+}
+
+.version {
+	text-orientation: sideways-right;
+	font-size: x-small !important;
+	font-style: italic !important; 
+	font-weight: bold;
+}
+
+.panelGridCenterLogin {
+	position: relative;
+	width: 30%;
+	margin: 5%;
+	margin-left: 35%;
+	margin-right: 35%;
+	align-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.input {
+	width: 96%;
+}
+
+.fontBolder {
+	font-weight: bolder;
+}
+
+.container {
+	position: relative;
+}
+
+#content {
+	position: relative;
+	bottom: 3%;
+}
+
+
+#header {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: fit-content;
+}
+
+#footer {
+	position: relative;
+	width: 100%;
+	background-color: #64a9a4;
+	height: fit-content;
+	float: left;
+	background-color: #64a9a4;
+	color: white;
+	margin-top: 4%
+	}
+
+
+#footer h2 {
+	color: white;
+	font-size: 15px;
+	margin-left: 1%;
+}
+
+#footer #autarquia {
+	color: white;
+	font-size: 15px;
+	clear: left;
+	margin-left: 1%;
+	font-family: "Open Sans","Helvetica Neue",sans-serif;
+}
+
+#footer img {
+	float: left;
+	margin-left: 1%;
+	padding-top: 15px;
+	clear: right
+}
+
+body .ui-button {
+	background-color: #64a9a4;
+	border: 1px solid #64a9a4;
+}
+
+.imageCentered {
+	text-align: center;
+}
+
+#infoPanel_content {
+	background-color: white;
+	border: none;
+	font-weight: 700;
+	font-style: italic;
+}
+
+#infoPanel {
+	border: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.panelGridCenterLogin {
+		position: relative;
+		margin-top: 6%;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		align-content: center;
+	}
+	
+	#content {
+		position: relative;
+		bottom: 1%;
+	}
+	#footer {
+		position: relative;
+		width: 100%;
+		background-color: #64a9a4;
+		margin-top: 16%;
+		float: left;
+		background-color: #64a9a4;
+		color: white;
+		background-color: #64a9a4;
+	}
+	
+	div#contentLogin {
+		position: relative;
+		bottom: 2%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.panelGridCenterLogin {
+		position: relative;
+		margin-top: 6%;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+		align-content: center;
+	}
+	
+
+	.container {
+		position: relative;
+	}
+	
+	#footer {
+		position: relative;
+		width: 100%;
+		background-color: #64a9a4;
+		height: fit-content;
+		float: left;
+		background-color: #64a9a4;
+		color: white;
+		background-color: #64a9a4;
+	}
+	
+	div#contentLogin {
+		position: relative;
+		top: 2%;
+	}
+	
+	
+	
+}

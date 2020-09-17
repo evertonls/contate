@@ -1,0 +1,47 @@
+@charset "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ff6666;
+}
+
+#errobackground{
+	text-align: center;	
+}
+
+div{
+	background-color: #ff6666 !important;	
+}
+
+#escudo{
+	height: 40%;
+}
+
+#message {
+	position: relative;
+	width: 100%;
+}
+
+#message-sub{
+	width: 100%;
+}
+
+#message-static {
+	width: 100%;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.ui-message-error-icon {
+	width: 1em !important;
+	height: 1em !important;
+}
+
+
+
+

@@ -1,0 +1,463 @@
+@charset "UTF-8";
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+textarea {
+	resize: none;
+	width: inherit;
+	border: 1px solid darkgray;
+	border-radius: 4px;
+}
+
+.layoutCabecalho {
+	text-align: center;
+	border: 1px solid darkgray;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.layoutStatus {
+	text-align: center;
+	border: 1px solid darkgray;
+	border-radius: 4px;
+	margin-bottom: 4px;
+}
+
+.col-pad {
+	padding: 0px !important;
+	margin: auto;
+}
+
+.ciesq {
+	text-align: left;
+	border: 1px solid darkgray;
+	border-radius: 4px;
+}
+
+.cimeio {
+	text-align: left;
+	border: 1px solid darkgray;
+	border-radius: 4px;
+}
+
+.cidir {
+	text-align: left;
+	border: 1px solid darkgray;
+	border-radius: 4px;
+}
+
+#cicol11 {
+	padding-right: 0px;
+}
+
+#cicol21 {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+#cicol31 {
+	padding-left: 0px;
+}
+
+#cicol12 {
+	padding-right: 2px;
+}
+
+#cicol22 {
+	padding-left: 2px;
+}
+
+#statcol1 {
+	padding-top: 14px;
+}
+
+#pnlLine1 {
+	margin-left: -14px;
+	margin-right: -14px;
+}
+
+#pnlLine2 {
+	margin-left: -14px;
+	margin-right: -14px;
+	margin-bottom: 4px
+}
+
+#pnlLine3 {
+	border: 1px solid darkgray;
+	border-radius: 4px;
+	text-align: justify;
+	margin-bottom: 4px;
+	padding: 8px;
+}
+
+.obss {
+	border: 1px solid darkgray;
+	border-radius: 4px;
+	text-align: justify;
+	margin-top: 4px !important;
+}
+
+.anexoobs {
+	text-align: center;
+}
+
+.direita {
+	text-align: end;
+}
+
+#pnlLine4 {
+	border: 1px solid darkgray;
+	border-radius: 4px;
+	text-align: center;
+	margin-top: 4px
+}
+
+.iniciotext {
+	margin-left: 10px;
+}
+
+.discriCabeca {
+	margin-left: -10px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.borda {
+	border: 1px solid gray;
+}
+
+.botao {
+	width: 120px !important;
+}
+
+.botaopdf {
+	width: 160px !important;
+}
+
+.btnEnc {
+	margin: 4px !important;
+}
+
+#form\:ci\:tabelaCis {
+	position: relative;
+	width: 90%;
+	margin-top: 4%;
+	left: 5%;
+	right: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#form\:ci\:detalheCi {
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	text-align: center;
+	overflow: auto;
+	max-height: 90vh;
+	border: none;
+}
+
+#form\:ci\:detalheTimeLine {
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	text-align: center;
+	overflow: auto;
+	max-height: 60vh;
+	border: 1px solid darkgray;
+}
+
+.ui-datatable.borderless thead th, .ui-datatable.borderless tbody, .ui-datatable.borderless tbody tr, .ui-datatable.borderless tbody td {
+	border-style: none;
+}
+
+#form\:ci\:dialog {
+	width: 80% !important;
+	height: auto !important;
+	overflow: auto;
+}
+
+#form\:ci\:dialogTimeLine {
+	width: 40% !important;
+	height: auto !important;
+	overflow: auto;
+}
+
+#form\:ci\:encapaneldialog {
+	width: 30% !important;
+	height: auto !important;
+	overflow: auto;
+	text-align: center;
+}
+
+#form\:defereconfenca\:defereencapaneldialog {
+	width: 30% !important;
+	height: auto !important;
+	overflow: auto;
+	text-align: center;
+}
+
+#form\:justificaenca\:justiencapaneldialog {
+	width: 30% !important;
+	height: auto !important;
+	overflow: auto;
+	text-align: center;
+}
+
+#form\:despachaencapaneldialog {
+	width: 30% !important;
+	height: auto !important;
+	overflow: auto;
+	text-align: center;
+}
+
+#form\:admpaneldialog {
+	width: 30% !important;
+	height: auto !important;
+	overflow: auto;
+	text-align: center;
+}
+
+#form\:ci\:encscroll {
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	text-align: center;
+	overflow: auto;
+	max-height: 90vh;
+	border: none;
+}
+
+
+#form\:ci\:tabelaCis_paginator_top {
+	background-color: lightgrey;
+	border: none;
+}
+
+#form\:ci\:tabelaCis_paginator_bottom {
+	border: none;
+	background-color: lightgrey;
+}
+
+body .ui-datatable .ui-datatable-header, body .ui-datatable .ui-datatable-footer {
+	background-color: #64a9a4;
+	color: white;
+	text-shadow: 2px 2px 5px #000000;
+}
+
+body .ui-datatable .ui-datatable-data>tr>td {
+	background-color: white;
+	color: black;
+	font-weight: 400;
+	text-shadow: none;
+}
+
+.coluna {
+	text-align: center;
+}
+
+.bold {
+	font-weight: bold;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.dwnButton {
+	width: 120px !important;
+}
+
+.ui-dialog-titlebar {
+	text-align: center;
+}
+
+.textArea {
+	border: none !important;
+}
+
+.onemenu {
+	min-width: 0 !important;
+	width: 100% !important;
+}
+
+@media only screen and (max-width: 600px) {
+	#cipnl, #encpnl{
+		width: 100%;
+		margin-bottom: 10vh;
+		border: none;
+	}
+	#form\:ci\:encscroll {
+		text-align: -webkit-center;
+		text-align: -moz-center;
+		text-align: center;
+		overflow: auto;
+		max-height: 90vh;
+		border: none;
+	}
+	#form\:ci\:dialog {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:ci\:dialogTimeLine {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:ci\:encapaneldialog {
+		width: 70% !important;
+		height: auto !important;
+		overflow: auto;
+		text-align: center;
+	}
+	#form\:admpaneldialog {
+		width: 70% !important;
+		height: auto !important;
+		overflow: auto;
+		text-align: center;
+	}
+	.layoutCabecalho {
+		display: none !important;
+	}
+	#cicol11 {
+		padding-right: 0.5em;
+	}
+	#cicol21 {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		margin-top: -9px;
+		margin-bottom: -9px;
+	}
+	#cicol31 {
+		padding-left: 0.5em;
+	}
+	#cicolUnica {
+		padding-left: 0px;
+	}
+	#cicol12 {
+		padding-right: 0.5em;
+		margin-bottom: -4.5px;
+	}
+	#cicol22 {
+		padding-left: 0.5em;
+		margin-top: -4.5px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#cipnl, #encpnl{
+		width: 100%;
+		margin-bottom: 10vh;
+		border: none;
+	}
+	#form\:ci\:encscroll {
+		text-align: -webkit-center;
+		text-align: -moz-center;
+		text-align: center;
+		overflow: auto;
+		max-height: 90vh;
+		border: none;
+	}
+	#form\:ci\:dialog {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:ci\:dialogTimeLine {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:ci\:encapaneldialog {
+		width: 70% !important;
+		height: auto !important;
+		overflow: auto;
+		text-align: center;
+	}
+	#form\:admpaneldialog {
+		width: 30% !important;
+		height: auto !important;
+		overflow: auto;
+		text-align: center;
+	}
+	.layoutCabecalho {
+		display: none !important;
+	}
+	#cicol11 {
+		padding-right: 0.5em;
+	}
+	#cicol21 {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		margin-top: -9px;
+		margin-bottom: -9px;
+	}
+	#cicol31 {
+		padding-left: 0.5em;
+	}
+	#cicol12 {
+		padding-right: 0.5em;
+		margin-bottom: -4.5px;
+	}
+	#cicolUnica {
+		padding-left: 0px;
+	}
+	#cicol22 {
+		padding-left: 0.5em;
+		margin-top: -4.5px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#form\:ci\:dialog {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:ci\:dialogTimeLine {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:ci\:encapaneldialog {
+		width: 70% !important;
+		height: auto !important;
+		overflow: auto;
+		text-align: center;
+	}
+	#form\:admpaneldialog {
+		width: 70% !important;
+		height: auto !important;
+		overflow: auto;
+		text-align: center;
+	}
+	#cicol11 {
+		padding-right: 0.5em;
+	}
+	#cicol21 {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		margin-top: -9px;
+		margin-bottom: -9px;
+	}
+	#cicol31 {
+		padding-left: 0.5em;
+	}
+	#cicolUnica {
+		padding-left: 0px;
+	}
+	#cicol12 {
+		padding-right: 0.5em;
+		margin-bottom: -4.5px;
+	}
+	#cicol22 {
+		padding-left: 0.5em;
+		margin-top: -4.5px;
+	}
+}

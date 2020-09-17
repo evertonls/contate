@@ -1,0 +1,102 @@
+@charset "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+}
+
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+.centeredText {
+	text-align: center
+}
+
+.bolderText {
+	font-weight: bolder;
+}
+
+#cadForm {
+	position: relative;
+	top: 10px;
+	padding: 1%;
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	align-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.input {
+	width: 100%;
+}
+
+.obs {
+	color: red;
+}
+
+#cadForm\:setor, #cadForm\:autoriza, #cadForm\:venceHabilitacao_input, #cadForm\:dataNascimento_input{
+	width: 100% !important;
+}
+
+#cadForm\:escudo {
+	width: 10%;
+}
+
+
+.fontBolder {
+	font-weight: bolder;
+}
+
+.container {
+	position: relative;
+	width: 0%;
+	float: none;
+}
+
+#header {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: fit-content;
+}
+
+body .ui-button {
+	background-color: #64a9a4;
+	border: 1px solid #64a9a4;
+}
+
+.imageCentered {
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	
+	#cadForm {
+		position: relative;
+		width: 100%;
+		margin-left: 0%;
+		margin-right: 0%;
+		align-content: center;
+	}
+	
+	#content {
+		position: relative;
+		bottom: 1%;
+	}
+	
+	
+}
+	

@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body{
+	background-image: url("#{resource['/imagens/escudo_amc.png']}");
+	background-repeat: no-repeat;
+	 background-attachment: fixed;
+	background-size: contain;
+	background-position: center center;
+}
+
+
+body .ui-button.ui-button-text-icon-left .ui-icon {
+	left: .2em !important;
+}
+
+.M {
+	background-color: orange !important;
+	color: white !important;
+}
+
+.N {
+	background-color: steelblue !important;
+	color: white !important;
+}
+
+.A {
+	background-color: red !important;
+	color: white !important;
+}
+
+.R{
+	background: #c8c8c8 !important;
+	color: #333 !important;
+}
+
+#form\:noti\:tblnotifica {
+	position: relative;
+	width: 90%;
+	margin-top: 4%;
+	left: 5%;
+	right: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pnlcomu {
+	text-align: center;
+}
+
+.centeredText {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.botao {
+	width: 120px !important;
+}
+
+#form\:noti\:notiDetalhe {
+	text-align: -webkit-center;
+	text-align: -moz-center;
+	text-align: center;
+	overflow: auto;
+	max-height: 90vh;
+	border: none;
+}
+
+#form\:noti\:notiDialog {
+	width: 80% !important;
+	height: auto !important;
+	overflow: auto;
+}
+
+#form\:noti\:notipnl {
+	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	#form\:noti\:notiDialog {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:noti\:notipnl {
+		width: 100%;
+		margin-bottom: 10vh;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#form\:noti\:notiDialog {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+	#form\:noti\:notipnl {
+		width: 100%;
+		margin-bottom: 10vh;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#form\:noti\:notiDialog {
+		width: 90% !important;
+		height: auto !important;
+		overflow: auto;
+	}
+}
+
+
+
+

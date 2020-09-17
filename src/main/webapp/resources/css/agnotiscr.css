@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.centered {
+	text-align: center;
+}
+
+#form\:adminpanel {
+	position: relative;
+	width: 90%;
+	margin-top: 4%;
+	left: 5%;
+	right: 5%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+#form\:adminpanel_header {
+	background-color: #64a9a4;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 2px 5px #000000;
+}
