@@ -45,5 +45,8 @@
 		<param-name>primefaces.MOVE_SCRIPTS_TO_BOTTOM</param-name>
 		<param-value>true</param-value>
 	</context-param>
+	<welcome-file-list>
+		<welcome-file>usuarios/home.xhtml</welcome-file>
+	</welcome-file-list>
 
 </web-app>

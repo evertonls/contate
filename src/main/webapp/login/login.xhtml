@@ -1,30 +1,67 @@
-<!DOCTYPE html >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:h="http://java.sun.com/jsf/html"
-  xmlns:f="http://xmlns.jcp.org/jsf/core"
-  xmlns:p="http://primefaces.org/ui"
-  xmlns:pe="http://primefaces.org/ui/extensions">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
-<h:head>
-  <title>Login</title>
-  <h:outputStylesheet name="/css/login.css" />
-</h:head>
 
-<h:body>
-  <h:form prependId="false">
+<ui:composition template="/WEB-INF/templates/_loginTemplate.xhtml">
+	<ui:define name="title">Sistema de Controle de Ci's</ui:define>
+	<ui:define name="extraCss">
+		<h:outputStylesheet name="/css/login.css" />
+	</ui:define>
+	<ui:define name="extraJS">
+	</ui:define>
+	<ui:define name="contentLogin">
+		<h:form prependId="false">
+			<p:growl styleClass="messages" id="messages" closable="true">
+				<p:autoUpdate />
+			</p:growl>
+			<input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" />
+			<p:panelGrid id="pnl" columns="1" layout="grid"
+				styleClass="ui-fluid center  panelGridCenterLogin">
+				<p:panelGrid columns="1" layout="grid" styleClass="ui-noborder ui-fluid versionpnl">
+					<p:outputLabel styleClass="version" value="Versão 2.1" />
+				</p:panelGrid>
+				<p:panelGrid columns="1" layout="grid"
+					styleClass="ui-noborder ui-fluid center imageCentered">
+					<h:graphicImage name="/imagens/brasao_de_fortaleza.svg.png"
+						height="200" width="220" />
+				</p:panelGrid>
+				<p:panelGrid columns="1" layout="grid"
+					styleClass="ui-noborder ui-fluid center centeredText">
+					<p:staticMessage severity="error" summary="ERROR!"
+						detail="#{msg['login.errormsg']}"
+						rendered="${!empty param['error']}" />
+					<p:outputLabel styleClass="bolderText"
+						value="#{msg['login.sistitulo']}"></p:outputLabel>
+				</p:panelGrid>
 
-    <p:panelGrid columns="1" styleClass="ui-fluid center ui-noborder">
-      <h2>Contate</h2>
+				<p:inputMask id="usuario" placeholder="#{msg['login.usupholder']}"
+					required="true" requiredMessage="#{msg['login.usureqmessage']}"
+					autocomplete="off" mask="999.999.999-99" />
 
-      <p:outputLabel value="Login failed!" styleClass="red"
-        rendered="${!empty param['error']}" />
+				<p:password id="senha" placeholder="#{msg['login.senpholder']}"
+					required="true" requiredMessage="#{msg['login.pasreqmessage']}"
+					autocomplete="off" />
 
-      <p:inputText id="username" placeholder="CPF" />
-      <p:password id="password" placeholder="Senha" />
-
-      <p:commandButton value="Login" ajax="false" />
-    </p:panelGrid>
-
-  </h:form>
-</h:body>
+				<p:panelGrid columns="2" layout="grid"
+					styleClass="ui-noborder ui-fluid">
+					<h:outputLink
+						value="#{request.contextPath}/login/recuperarsenha.xhtml">
+						<h:outputText value="#{msg['login.esqsenha']}"></h:outputText>
+					</h:outputLink>
+				</p:panelGrid>
+				<p:panelGrid columns="1" styleClass="ui-noborder ui-fluid center"
+					layout="grid">
+					<p:commandButton value="Login" ajax="false" />
+				</p:panelGrid>
+			</p:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
 </html>
