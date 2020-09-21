@@ -14,28 +14,6 @@
 			<p:growl id="growlmenu" />
 			<input type="hidden" name="${_csrf.parameterName}"
 				value="${_csrf.token}" />
-			<div id="topdiv" class="p-grid">
-				<div class="p-col-6 p-md-12 p-lg-12 responsive">
-					<p:menubar id="logadocel" autoDisplay="false">
-						<sec:authorize access="isAuthenticated()">
-							<p:submenu label="Olá,
-						#{adminMenuBean.nome}"
-								icon="pi pi-user">
-								<p:menuitem disabled="false" containerStyleClass="logado"
-									value="Perfil" title="Acesso ao perfil de
-							usuário"
-									url="#{request.contextPath}/usuarios/perfil.xhtml">
-								</p:menuitem>
-								<p:menuitem value="Comunicados"
-									url="#{request.contextPath}/usuarios/home.xhtml" />
-							</p:submenu>
-						</sec:authorize>
-					</p:menubar>
-				</div>
-				<div class="p-col-6 p-md-12 p-lg-12 responsive">
-					<a id="icone" class="icon"> ☰ </a>
-				</div>
-			</div>
 			<p:menubar id="menutopnav" styleClass="tophide" autoDisplay="false">
 				<sec:authorize access="isAuthenticated()">
 					<p:submenu label="Olá,
@@ -49,6 +27,11 @@
 						<p:menuitem value="Comunicados"
 							url="#{request.contextPath}/usuarios/home.xhtml" />
 					</p:submenu>
+					<p:menuitem disabled="false" containerStyleClass="logado"
+							value="Consulta" title="Acesso ao perfil de
+							usuário"
+							url="#{request.contextPath}/login/login.xhtml">
+					</p:menuitem>
 				</sec:authorize>
 			
 				<sec:authorize access="hasAnyRole('ADMIN','SUPORTE', 'AUTOMENU')">

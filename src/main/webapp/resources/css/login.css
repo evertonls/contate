@@ -39,9 +39,6 @@ div#contentLogin{
 	top: 4%;
 }
 
-/*body .ui-panelgrid .ui-panelgrid-cell {
-	background-color: #ffe3a7;
-}*/
 
 .versionpnl{
 	text-align: right;	
@@ -124,13 +121,21 @@ div#contentLogin{
 	clear: right
 }
 
-body .ui-button {
+.ui-button{
 	background-color: #000000;
 	border: 1px solid #64a9a4;
 }
 
-.imageCentered {
+.bt{
+	background-color: #000000;
+	border: 1px solid #64a9a4;
+}
+
+
+.image img{
 	text-align: center;
+	height: 200px;
+	width: 220px;
 }
 
 #infoPanel_content {

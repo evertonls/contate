@@ -10,9 +10,9 @@
 
 <ui:composition template="/WEB-INF/templates/_siteTemplate.xhtml">
 	<ui:define name="title">Home</ui:define>
-	<ui:define name="homeCss">
+	<ui:define name="extraCss">
 		<ui:remove>for css</ui:remove>
-		<h:outputStylesheet name="/css/home.css" />
+				<h:outputStylesheet name="/css/home.css" />
 	</ui:define>
 	<ui:define name="homeJS">
 		<ui:remove>for js</ui:remove>
@@ -26,6 +26,61 @@
 			<input type="hidden" name="${_csrf.parameterName}"
 				value="${_csrf.token}" />
 
+			<h:outputText value="Código: " />
+			<p:inputMask id="codigo" />
+
+			<h:outputText value="Data Recebida: " />
+			<p:datePicker id="datarecebida" showIcon="true" />
+			
+			<h:outputText value="Função: " />
+			<p:selectOneMenu id="funcao" value="Função">
+				<f:selectItem itemLabel="Escolha uma" itemValue="" />
+				<f:selectItem itemLabel="teste1" itemValue="teste1" />
+				<f:selectItem itemLabel="teste2" itemValue="teste2" />
+				<f:selectItem itemLabel="teste1" itemValue="teste3" />
+			</p:selectOneMenu>
+
+			<p:outputLabel for="@next" value="Setor: " />
+			<p:selectOneMenu id="setor" value="Setor">
+				<f:selectItem itemLabel="Escolha um" itemValue="" />
+				<f:selectItem itemLabel="teste1" itemValue="teste1" />
+				<f:selectItem itemLabel="teste2" itemValue="teste2" />
+				<f:selectItem itemLabel="teste1" itemValue="teste3" />
+			</p:selectOneMenu>
+
+			<p:outputLabel for="@next" value="Agentes: " />
+			<p:selectOneMenu id="agentes" value="agentes">
+				<f:selectItem itemLabel="Escolha uma" itemValue="" />
+				<f:selectItem itemLabel="teste1" itemValue="teste1" />
+				<f:selectItem itemLabel="teste2" itemValue="teste2" />
+				<f:selectItem itemLabel="teste1" itemValue="teste3" />
+			</p:selectOneMenu>
+			
+			<p:outputLabel for="@next" value="Tipo de Justificativa: " />
+			<p:selectOneMenu id="tipojust" value="Tipo de justificativa">
+				<f:selectItem itemLabel="Escolha uma" itemValue="" />
+				<f:selectItem itemLabel="teste1" itemValue="teste1" />
+				<f:selectItem itemLabel="teste2" itemValue="teste2" />
+				<f:selectItem itemLabel="teste1" itemValue="teste3" />
+			</p:selectOneMenu>
+			
+			<h:outputText value="Data Início: " />
+			<p:datePicker id="datainicio" showIcon="true" />
+			
+			<h:outputText value="Data Término: " />
+			<p:datePicker id="datatermino" showIcon="true" />
+			
+			<h:outputText value="C.I: " />
+			<p:inputMask id="ci" mask="99-9999" />
+			
+			<p:outputLabel for="@next" value="Turno: " />
+			<p:selectOneMenu id="turno" value="Turno">
+				<f:selectItem itemLabel="Escolha uma" itemValue="" />
+				<f:selectItem itemLabel="teste1" itemValue="teste1" />
+				<f:selectItem itemLabel="teste2" itemValue="teste2" />
+				<f:selectItem itemLabel="teste1" itemValue="teste3" />
+			</p:selectOneMenu>
+			
 		</h:form>
 
 	</ui:define>

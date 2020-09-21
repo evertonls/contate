@@ -169,6 +169,11 @@ body .ui-menu {
 			font-size: large;
 			text-align: left !important;
 		}
+		#menu\:teste1 {
+			width: 100%;
+			font-size: large;
+			
+		}
 		
 		#menu:menutopnav{
 			width: 100%;

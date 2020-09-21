@@ -9,7 +9,7 @@
 
 
 <ui:composition template="/WEB-INF/templates/_loginTemplate.xhtml">
-	<ui:define name="title">Sistema de Controle de Ci's</ui:define>
+	<ui:define name="title">Contate</ui:define>
 	<ui:define name="extraCss">
 		<h:outputStylesheet name="/css/login.css" />
 	</ui:define>
@@ -20,20 +20,14 @@
 			<p:growl styleClass="messages" id="messages" closable="true">
 				<p:autoUpdate />
 			</p:growl>
-			<input type="hidden" name="${_csrf.parameterName}"
-				value="${_csrf.token}" />
 			<p:panelGrid id="pnl" columns="1" layout="grid"
-				styleClass="ui-fluid center  panelGridCenterLogin">
-				<p:panelGrid columns="1" layout="grid" styleClass="ui-noborder ui-fluid versionpnl">
-					<p:outputLabel styleClass="version" value="Versão 2.1" />
+				styleClass="ui-fluid center panelGridCenterLogin">
+				<p:panelGrid columns="1" layout="grid"
+					styleClass="ui-noborder ui-fluid center image">
+					<h:graphicImage styleClass="teste" name="/imagens/brasao_de_fortaleza.svg.png"/>
 				</p:panelGrid>
 				<p:panelGrid columns="1" layout="grid"
-					styleClass="ui-noborder ui-fluid center imageCentered">
-					<h:graphicImage name="/imagens/brasao_de_fortaleza.svg.png"
-						height="200" width="220" />
-				</p:panelGrid>
-				<p:panelGrid columns="1" layout="grid"
-					styleClass="ui-noborder ui-fluid center centeredText">
+					styleClass="ui-noborder ui-fluid center centeredText centeredText">
 					<p:staticMessage severity="error" summary="ERROR!"
 						detail="#{msg['login.errormsg']}"
 						rendered="${!empty param['error']}" />
@@ -41,24 +35,15 @@
 						value="#{msg['login.sistitulo']}"></p:outputLabel>
 				</p:panelGrid>
 
-				<p:inputMask id="usuario" placeholder="#{msg['login.usupholder']}"
-					required="true" requiredMessage="#{msg['login.usureqmessage']}"
-					autocomplete="off" mask="999.999.999-99" />
+				<p:inputMask id="username" placeholder="Cpf"
+					autocomplete="off"/>
 
-				<p:password id="senha" placeholder="#{msg['login.senpholder']}"
-					required="true" requiredMessage="#{msg['login.pasreqmessage']}"
+				<p:password id="password" placeholder="Senha"
 					autocomplete="off" />
 
-				<p:panelGrid columns="2" layout="grid"
-					styleClass="ui-noborder ui-fluid">
-					<h:outputLink
-						value="#{request.contextPath}/login/recuperarsenha.xhtml">
-						<h:outputText value="#{msg['login.esqsenha']}"></h:outputText>
-					</h:outputLink>
-				</p:panelGrid>
 				<p:panelGrid columns="1" styleClass="ui-noborder ui-fluid center"
 					layout="grid">
-					<p:commandButton value="Login" ajax="false" />
+					<p:commandButton styleClass="bt" value="Login" ajax="false" />
 				</p:panelGrid>
 			</p:panelGrid>
 		</h:form>
